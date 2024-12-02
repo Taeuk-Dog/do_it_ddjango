@@ -1,18 +1,22 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /home/ubuntu/do_it_ddjango
+    - source: /
+      destination: /home/ubuntu/do_it_ddjango
+    - source: /docker-compose.yaml
+      destination: /home/ubuntu/do_it_ddjango
+    - source: /.env
+      destination: /home/ubuntu/do_it_ddjango
 file_exists_behavior: OVERWRITE
 
 permissions:
-  - object: /home/ubuntu/do_it_ddjango
-    pattern: '**'
-    owner: root
-    group: root
+    - object: /home/ubuntu
+      pattern: '**'
+      owner: root
+      group: root
 
 hooks:
-  AfterInstall:
-    - location: scripts/after_deploy.sh
-      timeout: 100000  # 100초
-      runas: root
+    AfterInstall:
+        - location: scripts/after_deploy.sh
+	          timeout: 100000  # 100초
+          runas: root
