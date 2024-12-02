@@ -1,5 +1,5 @@
 #!/bin/bash
-REPOSITORY = /home/ubuntu/
+export REPOSITORY = /home/ubuntu/
 
 cd $REPOSITORY/do_it_ddjango
 
