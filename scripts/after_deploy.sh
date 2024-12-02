@@ -1,7 +1,6 @@
 #!/bin/bash
-export REPOSITORY = /home/ubuntu/
 
-cd $REPOSITORY/do_it_ddjango
+cd /home/ubuntu/do_it_ddjango
 
 echo "> Stop & Remove docker services"
 sudo docker-compose down
